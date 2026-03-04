@@ -3,126 +3,217 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Opportunity Education Brand Colors</title>
+    <title>Opportunity Education | Brand Identity</title>
     <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f4f7f9;
-            margin: 0;
-            padding: 40px 20px;
-            color: #333;
+        :root {
+            --blue-main: #0476D9;
+            --navy: #194973;
+            --sky: #BBE2F2;
+            --yellow-light: #F2B705;
+            --yellow-dark: #F29F05;
         }
+
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            justify-content: center;
+            color: #2d3436;
+        }
+
         .header {
             text-align: center;
-            margin-bottom: 50px;
-        }
-        .container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        .card {
-            background: white;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
-        }
-        .card:hover {
-            transform: translateY(-5px);
-        }
-        .color-sample {
-            height: 150px;
-            width: 100%;
-        }
-        .content {
             padding: 20px;
+            margin-bottom: 20px;
         }
-        .hex-code {
-            font-weight: bold;
-            font-size: 1.2rem;
-            margin-bottom: 10px;
-            display: block;
+
+        .header h1 {
+            color: var(--navy);
+            font-size: 2.5rem;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
-        h3 {
-            margin-top: 0;
-            color: #194973;
+
+        .header p {
+            color: #636e72;
+            font-size: 1.1rem;
         }
-        p {
-            font-size: 0.9rem;
-            line-height: 1.5;
-            color: #555;
+
+        /* Container Settings - Hapa ndipo uchawi wa Screen Fitting ulipo */
+        .palette-container {
+            display: flex;
+            flex-wrap: nowrap; /* Inazuia kadi zisishuke chini kwenye laptop */
+            gap: 15px;
+            padding: 20px;
+            max-width: 1400px;
+            margin: 0 auto;
+            width: 95%;
         }
-        .usage {
-            background: #f9f9f9;
-            padding: 10px;
-            border-radius: 6px;
-            border-left: 4px solid #ddd;
-            margin-top: 15px;
-            font-style: italic;
+
+        .card {
+            flex: 1; /* Inafanya kila kadi ichukue nafasi sawa */
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            display: flex;
+            flex-direction: column;
+            border: 1px solid rgba(255,255,255,0.3);
+        }
+
+        .card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+
+        .color-preview {
+            height: 180px;
+            width: 100%;
+            position: relative;
+            display: flex;
+            align-items: flex-end;
+            padding: 15px;
+            box-sizing: border-box;
+        }
+
+        .hex-label {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 5px 12px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 0.85rem;
+            color: #333;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .card-body {
+            padding: 20px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-body h3 {
+            margin: 0 0 12px 0;
+            font-size: 1.1rem;
+            color: var(--navy);
+            border-bottom: 2px solid #f0f0f0;
+            padding-bottom: 8px;
+        }
+
+        .card-body p {
+            font-size: 0.88rem;
+            line-height: 1.6;
+            margin-bottom: 15px;
+            color: #444;
+        }
+
+        .tag {
+            margin-top: auto;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            color: #888;
+            background: #f1f2f6;
+            padding: 6px 10px;
+            border-radius: 4px;
+            text-align: center;
+        }
+
+        /* Responsive Design - Kwa ajili ya Simu */
+        @media (max-width: 1024px) {
+            .palette-container {
+                flex-wrap: wrap; /* Inaruhusu kadi zishuke kwenye tablet/simu */
+                justify-content: center;
+            }
+            .card {
+                flex: none;
+                width: calc(45% - 20px); /* Kadi mbili kwa mstari kwenye tablet */
+                min-width: 250px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .card {
+                width: 100%; /* Kadi moja kwa mstari kwenye simu */
+            }
+            .header h1 {
+                font-size: 1.8rem;
+            }
         }
     </style>
 </head>
 <body>
 
-<div class="header">
-    <h1>Opportunity Education</h1>
-    <p>Brand Color Palette & Strategy</p>
-</div>
-
-<div class="container">
-    <div class="card">
-        <div class="color-sample" style="background-color: #0476D9;"></div>
-        <div class="content">
-            <span class="hex-code">#0476D9</span>
-            <h3>Primary Blue</h3>
-            <p>Inawakilisha <strong>uaminifu, hekima, na utulivu</strong>. Katika elimu, rangi hii inaleta hali ya mamlaka na usalama kwa mwanafunzi.</p>
-            <div class="usage">Matumizi: Logo, vitufe (buttons) muhimu, na vichwa vya habari (Headings).</div>
-        </div>
+    <div class="header">
+        <h1>Opportunity Education</h1>
+        <p>Visual Brand Strategy & Color Psychology</p>
     </div>
 
-    <div class="card">
-        <div class="color-sample" style="background-color: #194973;"></div>
-        <div class="content">
-            <span class="hex-code">#194973</span>
-            <h3>Deep Navy</h3>
-            <p>Inaleta dhana ya <strong>utofauti na weledi (Professionalism)</strong>. Ni rangi yenye uzito inayotoa msingi imara wa chapa.</p>
-            <div class="usage">Matumizi: Maandishi (Text blocks), Footer, na mipaka ya picha.</div>
+    <div class="palette-container">
+        
+        <div class="card">
+            <div class="color-preview" style="background: var(--blue-main);">
+                <span class="hex-label">#0476D9</span>
+            </div>
+            <div class="card-body">
+                <h3>Trust Blue</h3>
+                <p>Rangi ya msingi inayoashiria weledi na utulivu wa kiakili (Mental Clarity).</p>
+                <div class="tag">Primary Action</div>
+            </div>
         </div>
-    </div>
 
-    <div class="card">
-        <div class="color-sample" style="background-color: #BBE2F2;"></div>
-        <div class="content">
-            <span class="hex-code">#BBE2F2</span>
-            <h3>Light Sky</h3>
-            <p>Inaleta hisia za <strong>uwazi, urafiki, na nafasi ya kukua</strong>. Husaidia kupunguza uzito wa rangi nzito za bluu.</p>
-            <div class="usage">Matumizi: Background ya sehemu fulani, kadi ndogo, na vielelezo (illustrations).</div>
+        <div class="card">
+            <div class="color-preview" style="background: var(--navy);">
+                <span class="hex-label" style="color: #fff; background: rgba(0,0,0,0.3);">#194973</span>
+            </div>
+            <div class="card-body">
+                <h3>Heritage Navy</h3>
+                <p>Inaleta uzito wa kitaaluma na heshima ya taasisi duniani kote.</p>
+                <div class="tag">Typography & Base</div>
+            </div>
         </div>
-    </div>
 
-    <div class="card">
-        <div class="color-sample" style="background-color: #F2B705;"></div>
-        <div class="content">
-            <span class="hex-code">#F2B705</span>
-            <h3>Opportunity Yellow</h3>
-            <p>Inawakilisha <strong>furaha, nishati, na ubunifu</strong>. Ni rangi ya "mwanga" inayolenga kuchochea hamasa ya kujifunza.</p>
-            <div class="usage">Matumizi: Call to Action (CTA), ku-highlight pointi muhimu, na icons.</div>
+        <div class="card">
+            <div class="color-preview" style="background: var(--sky);">
+                <span class="hex-label">#BBE2F2</span>
+            </div>
+            <div class="card-body">
+                <h3>Ether Sky</h3>
+                <p>Inatoa "nafasi ya kupumua" kwenye muundo na kuleta hali ya kisasa na wepesi.</p>
+                <div class="tag">Backgrounds</div>
+            </div>
         </div>
-    </div>
 
-    <div class="card">
-        <div class="color-sample" style="background-color: #F29F05;"></div>
-        <div class="content">
-            <span class="hex-code">#F29F05</span>
-            <h3>Golden Accent</h3>
-            <p>Rangi ya <strong>mafanikio na thamani</strong>. Inasaidia kuleta joto (warmth) na kuvutia umakini wa haraka bila kuumiza macho.</p>
-            <div class="usage">Matumizi: Links, alama za mafanikio (badges), na mistari ya kusisitiza.</div>
+        <div class="card">
+            <div class="color-preview" style="background: var(--yellow-light);">
+                <span class="hex-label">#F2B705</span>
+            </div>
+            <div class="card-body">
+                <h3>Bright Energy</h3>
+                <p>Rangi ya matumaini. Inachochea ubunifu na umakini kwa mwanafunzi.</p>
+                <div class="tag">Highlights</div>
+            </div>
         </div>
+
+        <div class="card">
+            <div class="color-preview" style="background: var(--yellow-dark);">
+                <span class="hex-label">#F29F05</span>
+            </div>
+            <div class="card-body">
+                <h3>Success Gold</h3>
+                <p>Inawakilisha thamani na malengo yaliyofikiwa. Ni rangi ya ushindi.</p>
+                <div class="tag">Accents & Badges</div>
+            </div>
+        </div>
+
     </div>
-</div>
 
 </body>
 </html>
